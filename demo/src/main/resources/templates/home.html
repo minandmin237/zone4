@@ -1,0 +1,109 @@
+<style>
+    body {
+        position: relative; 
+    }
+    #section1 {padding-top:50px;height:300px;color: #fff; background-color: #35322C;}
+    </style>
+    <body background ="../css/zone4bg.jpg"></body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+              </button>
+              <img src = "../css/z4logo1.png"width=300 height=150>
+              <img src = "../css/zone4.jpg"width=580 height=145>  
+              <img src = "../css/zone41.jpg"width=580 height=145>                                                                         
+            </div>
+            <div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <a href="#section1">เมนู 1</a>
+                  <a href="#section2">เมนู 2</a>
+                  <a href="#section3">เมนู 3</a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav> 
+        <div id="section1" class="container-fluid">
+            <h1>Member</h1>
+            <table class="table table-dark">
+              <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">ลบ</th>
+                    <th scope="col">แก้ไข</th>
+                   
+                  </tr>
+                </thead>
+             </tr>
+             
+              <tr th:each="userEntity:${userEntity}">
+                  
+                  <td>
+                      <p th:text="${userEntity.userid}"></p> 
+                  </td>
+                  <td>
+                      <p th:text="${userEntity.password}"></p>
+                  </td>
+                  <td>
+                      <p th:text="${userEntity.email}"></p>
+                  </td>
+                  <td>
+                      <p th:text="${userEntity.date}"></p>
+                  </td>
+                  <td>
+                      <p th:text="${userEntity.age}"></p>
+                  </td>
+                  <td><a th:href="'/user/delete?id='+${userEntity.id}">delete</a></td>
+                  <td><a th:href="'/user/edit?id='+${userEntity.id}">edit</a></td>
+              </tr>
+            
+          </table>
+          <a class="navbar-brand" href="index">กลับไปยังหน้าลงทะเบียน</a>   
+    </body>
+    </html>
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    
+    <body>
+        <div class="footer-basic">
+            <footer>
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Home</a></li>
+                    <li class="list-inline-item"><a href="#">Services</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="copyright"><font color="yellow"> 61123851 นาย นินนี่ -  </font></p>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+    </html>
+    

@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org" > 
+<head> 
+    <title>Thymeleaf</title> 
+</head> 
+<body bgcolor= "#F5DEB3">
+    <body background ="../css/zone4bg.jpg"></body>
+<img src = "../css/z4logo1.png"width=300 height=150>
+<img src = "../css/zone4.jpg"width=600 height=150>  
+<img src = "../css/zone41.jpg"width=600 height=150>        
+    <span><h1 align = 'center'><font color="white"> Register </font> <hr><font color="white"> สมัครเล่นเกม </font></h1></span> <p th:text="${name}"></p>
+   <center>
+       <form action="/user/save" th:Object="${userEdit}" method="POST">
+        <input type="hidden" id="id" th:value="${userEdit?.id}" name="id">
+    <table>
+        
+            <label for="userid"><font color="white"> ID: </font></label>
+            <input type="text" id="userid" name="userid" th:field="*{userid}"><br><br>
+    
+            <label for="password"><font color="white"> Password: </font></label>
+            <input type="text" id="password" name="password" th:field="*{password}"><br><br>
+    
+            <label for="email"><font color="white"> Email: </font></label>
+            <input type="text" id="email" name="email" th:field="*{email}"><br><br>
+    
+            <label for="date"><font color="white"> Date: </font></label>
+            <input type="Date" id="date" name="date" th:field="*{date}"><br><br>
+    
+            <label for="age"><font color="white"> Age </font></label>
+            <input type="text" id="age" name="age" th:field="*{age}"><br><br>
+    </table>
+        <input type="submit" value="Submit"> 
+        <a th:href="home">ย้อนกลับ</a>
+      </center>
+    </form>
+</body> 
+</html>
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright"><font color="yellow"> 61123851 นาย นินนี่ -  </font></p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
